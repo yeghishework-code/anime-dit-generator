@@ -13,8 +13,9 @@ python unpack_dataset.py
 
 The script extracts `anime_faces_dataset.tar` to
 `datasets/anime-faces-180k`, the directory used by `train_model.py`. The
-archive contains approximately 185,000 files. To use a different archive or
-destination:
+archive contains approximately 185,000 files. Download it from
+[Hugging Face](https://huggingface.co/Yeghishee/anime_generate_diffT_50M/tree/main).
+To use a different archive or destination:
 
 ```powershell
 python unpack_dataset.py "path\to\archive.tar" --destination "path\to\folder"
@@ -51,8 +52,10 @@ the number of DDIM sampling steps. The default is 100 steps; valid values are
 DDIM samples the requested number of steps from that schedule.
 
 Resolutions above 64×64 use RealESRGAN through `spandrel`. Place
-`RealESRGAN_x4plus_anime_6B.pth` in the `models` folder. If `spandrel` is not
-installed, install it with:
+`RealESRGAN_x4plus_anime_6B.pth` in the `models` folder. The DiT and
+RealESRGAN checkpoints are available from the
+[Hugging Face repository](https://huggingface.co/Yeghishee/anime_generate_diffT_50M/tree/main).
+If `spandrel` is not installed, install it with:
 
 ```powershell
 python -m pip install spandrel
